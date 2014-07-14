@@ -42,6 +42,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
                 continue
             path = os.path.join(path, word)
 
+
         return path
 
 if __name__ == '__main__':
