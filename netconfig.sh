@@ -18,7 +18,7 @@ CALIBRE_SERVER_PORT=$5
 sudo service NetworkManager stop
 sudo service dnsmasq start
 
-
+sudo iptables -t nat -F #Cleaning iptables
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -i $ETH0 -j DNAT --to $ADDR:$SITE_SERVER_PORT
 sudo iptables -t nat -A PREROUTING -p tcp --dport $CALIBRE_SERVER_PORT -i $ETH0 -j DNAT --to $ADDR:$CALIBRE_SERVER_PORT
 
