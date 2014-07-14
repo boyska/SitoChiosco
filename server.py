@@ -7,8 +7,8 @@ from SimpleHTTPServer import SimpleHTTPRequestHandler
 # modify this to add additional routes
 ROUTES = (
     # [url_prefix ,  directory_path]
+    ['/InsomniaLab', './hack'],
     ['', './MainPage'],
-    ['/InsomniaLab', './hack']
 ) 
 
 class RequestHandler(SimpleHTTPRequestHandler):
